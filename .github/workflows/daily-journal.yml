@@ -1,0 +1,30 @@
+name: Daily Journal
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+
+  workflow_dispatch: 
+jobs:
+  run-journal:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar ambiente Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.25' # Versão baseada no seu go.mod
+          cache: true        # Acelera a execução fazendo cache das dependências
+
+      - name: Instalar dependências
+        run: go mod download
+
+      - name: Gerar e Enviar Briefing Diário
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_MY_CHAT_ID: ${{ secrets.TELEGRAM_MY_CHAT_ID }}
+        run: go run ./cmd/journal/main.go send

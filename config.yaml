@@ -1,0 +1,35 @@
+sources:
+  - name: "Hacker News"
+    url: "https://hnrss.org/frontpage"
+    category: "Tech"
+    priority: "high"
+
+  - name: "The Verge"
+    url: "https://www.theverge.com/rss/index.xml"
+    category: "Tech"
+    priority: "medium"
+
+  - name: "Agência Brasil"
+    url: "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml"
+    category: "Política BR"
+    priority: "high"
+
+  - name: "Folha de S.Paulo - Poder"
+    url: "https://feeds.folha.uol.com.br/poder/rss091.xml"
+    category: "Política BR"
+    priority: "high"
+
+  - name: "BBC Brasil"
+    url: "https://feeds.bbci.co.uk/portuguese/rss.xml"
+    category: "Política BR"
+    priority: "medium"
+
+  - name: "BBC International"
+    url: "https://feeds.bbci.co.uk/news/world/rss.xml"
+    category: "Política Internacional"
+    priority: "medium"
+
+  - name: "Al Jazeera"
+    url: "https://www.aljazeera.com/xml/rss/all.xml"
+    category: "Política Internacional"
+    priority: "medium"
