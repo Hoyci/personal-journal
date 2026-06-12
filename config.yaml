@@ -33,3 +33,8 @@ sources:
     url: "https://www.aljazeera.com/xml/rss/all.xml"
     category: "Política Internacional"
     priority: "medium"
+
+  - name: "G1 RJ"
+    url: "https://g1.globo.com/dynamo/rio-de-janeiro/rss2.xml"
+    category: "Rio de Janeiro"
+    priority: "high"
