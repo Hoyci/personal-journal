@@ -24,17 +24,12 @@ sources:
     category: "Política BR"
     priority: "medium"
 
-  - name: "BBC International"
-    url: "https://feeds.bbci.co.uk/news/world/rss.xml"
-    category: "Política Internacional"
-    priority: "medium"
-
   - name: "Al Jazeera"
     url: "https://www.aljazeera.com/xml/rss/all.xml"
     category: "Política Internacional"
     priority: "medium"
 
   - name: "G1 RJ"
-    url: "https://g1.globo.com/dynamo/rio-de-janeiro/rss2.xml"
+    url: "https://g1.globo.com/rss/g1/rj/rio-de-janeiro/"
     category: "Rio de Janeiro"
     priority: "high"

@@ -52,6 +52,10 @@ func (r *RSSCollector) Fetch(ctx context.Context) ([]core.Article, error) {
 
 		if item.PublishedParsed != nil {
 			a.PublishedAt = *item.PublishedParsed
+		} else if item.UpdatedParsed != nil {
+			a.PublishedAt = *item.UpdatedParsed
+		} else {
+			a.PublishedAt = time.Now()
 		}
 
 		articles = append(articles, a)
